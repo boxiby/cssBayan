@@ -21,3 +21,87 @@ a {
 .table {
     border-collapse: collapse;
 }
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1270px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+/*PC*/
+@media (max-width: 1920px) {
+    .container {
+        max-width: 1270px;
+    }
+}
+/*Tablet*/
+@media (max-width: 820px) {
+    .container {
+        max-width: none;
+    }
+}
+/*Mobile*/
+@media (max-width: 320px) {
+    .container {
+        max-width: none;
+    }
+}
+@media (any-hover: hover) {
+    .accordion:hover .accordion__close {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
+    .accordion__item:hover .accordion__image {
+        max-height: 400px;
+        padding: 0 0 25px 0;
+    }
+  }
+.accordion__close {
+    position: relative;
+    width: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease 0s;
+}
+.accordion__close::before,
+.accordion__close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    background-color: #000;
+    height: 2px;
+    /*позволяет наклонить относительно одного края*/
+}
+
+.accordion__close::before {
+    transform: rotate(45deg);
+}
+
+.accordion__close::after {
+    transform: rotate(-45deg);
+}
+.accordion__item {
+    display: flex;
+    border-top: 1px solid #cecece;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.accordion__image {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s ease;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+}
