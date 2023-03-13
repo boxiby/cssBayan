@@ -1,0 +1,159 @@
+html,
+body {
+    height: 100%;
+    font-size: 100%;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 400;
+    color: #191919;
+    min-width: 320px;
+    background-color: #e8f9ff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #4d897d;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0em 0.6em;
+}
+.header {
+    padding: 0 0.6em;
+}
+
+@media (any-hover: hover) {
+    .accordion__close {
+        visibility: hidden;
+    }
+    .accordion:hover .accordion__close{
+        visibility: visible;
+    }
+    .accordion:hover .accordion__title {
+        color: #191919;
+    }
+    .accordion__item:hover .accordion__close {
+        transform: rotate(135deg);
+    }
+    .accordion__item:hover .accordion__image {
+        height: 20vw;
+        margin-bottom: 0.5em;
+    }
+    .accordion__label {
+        cursor: pointer;
+    }
+  }
+
+.accordion__item {
+    border-top: 0.05em solid #fff;
+}
+.accordion__title {
+    padding: 0.5em;
+}
+.accordion__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #4d897d;
+    font-size: 1.6em;
+}
+
+.accordion__input {
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+.accordion__close {
+    color: #000;
+    background: url('img/close.svg') center/cover;
+    width: 2rem;
+    height: 2rem;
+    transition: all .3s ease 0s;
+}
+
+.accordion__image { 
+    transition: all .7s ease;
+    height: 0;
+    width: auto;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.accordion__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion__input:checked ~ div .accordion__close {
+    transform: rotate(135deg);
+}
+
+.accordion__input:checked ~ .accordion__title {
+    color: #000;
+}
+.accordion__item:active .accordion__close {
+    background: url('img/close-purple.svg') center/cover;
+    width: 2rem;
+    height: 2rem;
+  }
+.accordion__item:active .accordion__image {
+    opacity: 0.6;
+}
+.accordion__item:active .accordion__title,
+.accordion__label  {
+    color: #4a277d;
+  }
+
+/*Best view on 320, 820 и 1920*/
+/*Mobile*/
+@media (min-width: 320px) {
+    .container {
+        max-width: none;
+    }
+    .accordion__label {
+        font-size: 1.1em;
+    }
+    .accordion__input:checked ~ .accordion__image {
+        height: 60vw;
+        margin-bottom: 0.5em;
+    } 
+}
+/*Tablet*/
+
+@media (min-width: 820px) {
+    .container {
+        max-width: 80%;
+    }
+    .accordion__input:checked ~ .accordion__image {
+        height: 30vw;
+        margin-bottom: 0.5em;
+    } 
+}
+
+/*PC*/
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 50%;
+    }
+    .accordion__input:checked ~ .accordion__image {
+        height: 20vw;
+        margin-bottom: 0.5em;
+    } 
+}
+

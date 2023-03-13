@@ -5,11 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My bayan</title>
 </head>
 
 <body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <h1>Let's do it, bayan css only</h1>
+            </div>
+        </header>
 
+        <main class="main">
+            <div class="container">
+                <section class="accordion">
+                    <div class="accordion__item">
+
+                        <label class="accordion__label" for="item1">
+                            <input class="accordion__input" type="radio" id="item1" name="item" checked>
+                            <div class="accordion__title">
+                                I’m doing it!
+                                <span class="accordion__close"></span>
+                            </div>
+                            <img class="accordion__image" src="img/frontend.jpg" alt="Sleeping position for coders">
+                        </label>
+                    </div>
+                    <div class="accordion__item">
+
+                        <label class="accordion__label" for="item2">
+                            <input class="accordion__input" type="radio" id="item2" name="item">
+                            <div class="accordion__title">
+                                Think Senior, think
+                                <span class="accordion__close"></span>
+                            </div>
+                            <img class="accordion__image" src="img/think_senior.jpg" alt="Sleeping position for coders">
+                        </label>
+                    </div>
+
+                    <div class="accordion__item">
+
+                        <label class="accordion__label" for="item3">
+                            <input class="accordion__input" type="radio" id="item3" name="item">
+                            <div class="accordion__title">
+                                The best friend
+                                <span class="accordion__close"></span>
+                            </div>
+                            <img class="accordion__image" src="img/stackoverflow.jpg"
+                                alt="Sleeping position for coders">
+                        </label>
+                    </div>
+
+                    <div class="accordion__item">
+
+                        <label class="accordion__label" for="item4">
+                            <input class="accordion__input" type="radio" id="item4" name="item">
+                            <div class="accordion__title">
+                                Don’t question my self-trust
+                                <span class="accordion__close"></span>
+                            </div>
+                            <img class="accordion__image" src="img/vscode.jpg" alt="Sleeping position for coders">
+                        </label>
+                    </div>
+
+                    <div class="accordion__item">
+
+                        <label class="accordion__label" for="item5">
+                            <input class="accordion__input" type="radio" id="item5" name="item">
+                            <div class="accordion__title">
+                                Sleeping coder
+                                <span class="accordion__close"></span>
+                            </div>
+
+                            <img class="accordion__image" src="img/sleeping.jpg" alt="Sleeping position">
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+
+        </footer>
 </body>
 
 </html>
